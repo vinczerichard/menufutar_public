@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Dec 23. 19:37
+-- Létrehozás ideje: 2023. Dec 27. 13:31
 -- Kiszolgáló verziója: 10.4.27-MariaDB
 -- PHP verzió: 7.4.33
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `menufutar`
+-- Adatbázis: `menufutar_public`
 --
 
 -- --------------------------------------------------------
@@ -1942,7 +1942,7 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`id`, `app_name`, `email`, `phone`, `changeday`, `changehour`, `maxorder`, `email_expiration_time`) VALUES
-(1, 'MenuFutar', 'noreply@menufutar.hu', '+36205213310', 4, 14, 25, 1);
+(1, 'MenuFutar', 'noreply@menufutar.hu', NULL, 4, 14, 25, 30);
 
 -- --------------------------------------------------------
 
@@ -3245,9 +3245,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `nickname`, `email`, `role`, `location`, `image`, `inv_name`, `inv_postal`, `inv_city`, `inv_address`, `email_verified_at`, `password`, `remember_token`, `verify_hash`, `verify_hash_expiration`, `forgot_hash`, `forgot_hash_expiration`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Vincze Richárd', 'Ricsi', 'vinczericsi@gmail.com', 1, '', NULL, '', '', '', '0', '2023-12-02 19:52:00', '$2y$10$Z4jZb7KNqpB4lJi/3xVvvO3bpWB/LkbMiwo09HemrCt.cHn6fDff6', 'E7PTuayMKskUTALuClREntcxZ3B8Hshv9LxtkyloaegND29NIUEvv2X6ObF1', NULL, '2023-12-02 20:51:26', NULL, '2023-12-14 13:14:11', '2023-04-04 17:23:01', '2023-12-14 12:14:37', NULL),
-(41, 'rvincze@sanatmetal.hu', NULL, 'rvincze@sanatmetal.hu', NULL, 'Kazincbarcika', NULL, 'vinczericsi@gmail.com', '3300', 'vinczericsi@gmail.com', 'vinczericsi@gmail.com', '2023-12-10 15:36:46', '$2y$10$Kn/vvgw6RNZIKQoSMIkKSOKVLB5PJTGk3LR.DjNa8hVZkIoms5t3m', NULL, NULL, '2023-12-10 16:35:54', NULL, NULL, '2023-12-02 16:15:17', '2023-12-10 15:36:46', NULL),
-(42, 'Simkó Jácint', NULL, 'simi@futureweb.hu', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '$2y$10$pL5.AKKe.rg1TqxrB3blGu9hZMsnWeWLiEC8u5A3hI1opqH0Bq3iy', NULL, NULL, NULL, NULL, NULL, '2023-12-23 10:27:48', '2023-12-23 10:51:07', '2023-12-23 10:51:07');
+(1, 'Adminisztrátor', 'Admin', 'admin@example.com', 1, '', NULL, '', '', '', '0', '2023-12-02 19:52:00', '$2y$10$YdR.CF2SIxP0Tk/cyrRbfejSNFlJUloCy6oj049i6hqbh6321q5sC', 'Nl5HT3bHRsddr8t8hcCY7402uLZ9MTMiat5uBPtKNxaKKxyYbovl1OKqJqpi', NULL, '2023-12-02 20:51:26', NULL, '2023-12-14 13:14:11', '2023-04-04 17:23:01', '2023-12-14 12:14:37', NULL);
 
 -- --------------------------------------------------------
 
@@ -3296,8 +3294,7 @@ CREATE TABLE `user_permission` (
 --
 
 INSERT INTO `user_permission` (`id`, `user`, `permission`, `created_at`, `updated_at`, `deleted_at`, `updated_by`) VALUES
-(11, 1, 'Admin', '2023-12-17 14:45:45', '2023-12-17 14:45:45', NULL, NULL),
-(13, 42, 'Admin', '2023-12-23 11:28:19', '2023-12-23 11:28:19', NULL, NULL);
+(11, 1, 'Admin', '2023-12-17 14:45:45', '2023-12-17 14:45:45', NULL, NULL);
 
 -- --------------------------------------------------------
 
